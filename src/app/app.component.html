@@ -1,0 +1,53 @@
+<h2 class="text-center mt-4">Custom Pipe with multiple parameters</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="card mt-4">
+        <div class="card-header">Pipe transform</div>
+        <div class="card-body">
+          <div class="img-wrapper">
+            <img alt class="img" src="../assets/images/image.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="card mt-4">
+        <div class="card-header">Pipe transform</div>
+        <div class="card-body">
+          <div class="img-wrapper">
+            <img alt class="img" src="../assets/images/code.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mt-4">
+    <div class="card-header">
+      List showing : only females, age less then 30 and from delhi
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li *ngFor="let item of list | name:'female':30:'delhi'"
+            class="list-group-item">
+          {{item.name}} ({{item.gender.toUpperCase()}})
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="card mt-4">
+    <div class="card-header">
+      List showing : only males, age less then 28 and from noida
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <li *ngFor="let item of list | name:'male':28:'noida'"
+            class="list-group-item">
+          {{item.name}} ({{item.gender.toUpperCase()}})
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
