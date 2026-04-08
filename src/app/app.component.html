@@ -30,10 +30,12 @@
     </div>
     <div class="card-body">
       <ul class="list-group">
-        <li *ngFor="let item of list | name:'female':30:'delhi'"
+        @for (item of list | name:'female':30:'delhi'; track item) {
+          <li
             class="list-group-item">
-          {{item.name}} ({{item.gender.toUpperCase()}})
-        </li>
+            {{item.name}} ({{item.gender.toUpperCase()}})
+          </li>
+        }
       </ul>
     </div>
   </div>
@@ -43,10 +45,12 @@
     </div>
     <div class="card-body">
       <ul class="list-group">
-        <li *ngFor="let item of list | name:'male':28:'noida'"
+        @for (item of list | name:'male':28:'noida'; track item) {
+          <li
             class="list-group-item">
-          {{item.name}} ({{item.gender.toUpperCase()}})
-        </li>
+            {{item.name}} ({{item.gender.toUpperCase()}})
+          </li>
+        }
       </ul>
     </div>
   </div>
